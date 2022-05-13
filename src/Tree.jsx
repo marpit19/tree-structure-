@@ -31,9 +31,20 @@ const data = {
           {
             id: '2.1',
             title: 'Node 2.1',
-            children: [],
+            children: [
+                {
+                    id: '2.1.1',
+                    title: 'Node 2.1.1',
+                    children: [],
+                },
+                {
+                    id: '2.1.2',
+                    title: 'Node 2.1.2',
+                    children: [],
+                },
+            ],
           },
-        ], 
+        ],
     },
   ],
 };
@@ -54,7 +65,6 @@ export default function Tree() {
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpanded={['root']}
       defaultExpandIcon={<ChevronRightIcon />}
-      draggable={true}
     >
       {renderTree(data)}
     </TreeView>
